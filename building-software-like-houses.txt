@@ -1,0 +1,5 @@
+From design patterns to methodologies, software engineering has borrowed a lot from civil engineering - we do talk about "building software", don't we ? And nowadays, with Agile methodology being back-ported into the management of large building project, and the massive usage of software, at all stage, of a construction project, this industry is also start to looking into our tools and approaches to enhance their own processes...
+
+So, the question is who does it better ? :)
+
+During this (funny) presentation, Benjamin, an expert from the building giant Bouygues and Romain, an experienced software engineer, will present and discuss both common ground and radical difference between the two industry, all spice up with horror stories from the field, so that the audience can figure who does it better (or worse) ?
