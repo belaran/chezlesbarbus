@@ -16,7 +16,7 @@ JAX London
 * https://jaxlondon.com/call-for-papers/
 * When ? 9-12/10 2017
 * CFP finished on 18/04/2017
-* Status: SUBMITTED
+* Status: REJECTED
 
 Code Motion Berlin
 ----
@@ -32,31 +32,29 @@ Javaland
 ----
 * Where: Köln
 * CfP closes on 10/08/2017
-* Status: TODO
-* Note: sans toi, mais je le met ici pour moi :)
+* Status: REJECTED
 
-JBCNConf
+Mix IT
 ----
-* Where ? Barcelona
-* When ? 19-21 June
-* http://www.jbcnconf.com/2017/
+* Status: FAILED
 
-BreizCamp
+Code Motion Amsterdam
 ----
-* après devox france
+* CFP: http://speaker.codemotionworld.com/c4p.php?c=gestione_call4paper
+* When: May 8th
+* CFP finishes on 15/06/2017
+* Status: SUBMITTED
 
-* devoxx france ?
 
-JonTheBeach
-----
-* when: May
-* where: Malaga, Spain
-* CfP starts:
+Devoxx France
+---
+* Where: Paris
+* CfP closes on 14/01/2017
+* Status: SUBMITTED
 
 JavaZone
 ----
-* Where ? Oslo
-* When ?
+* Where: Oslo
+* When: September 2018
 * https://2017.javazone.no/
-* CfP opens
-
+* CfP opens in 2018
