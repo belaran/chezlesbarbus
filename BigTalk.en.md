@@ -460,7 +460,7 @@ wired
 
 `FLD` don't brag too much, or you expose urself => or if u want to brag like us
 
-`RPE` use to 2FA for f**k sake !
+`RPE` use to 2FA for f..k sake !
 
 
 2FA
