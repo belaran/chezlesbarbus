@@ -3,18 +3,11 @@ Hello
 
 `DPL` Hi everybody ! Welcome to Hairy on Security. I'm Damien...
 
-`RPE` I'm Romain
+`RPE` ... and I'm Romain. We are going to talk about security, or rather how to integrate security consideration, during you development process.
 
-Continuous Security
-----
+`DPL` Sort of doing something akin to "Continous Security" - pretty much like we already do Continuous Integration.
 
-`RPE` ... and this is s basically our message of today :)
-
-`RPE` so if you are manager, now it means you can already leave the room or fall asleep.
-
-`pause`
-
-`RPE` That being said, where do we start? Because security is a rather broad topic to say the least
+`RPE` Exaclty. That being said, where do we start? Because security is a rather broad topic to say the least ? For many java dev or architect it is a daunting task !
 
 Threat Modeling
 --------
@@ -29,33 +22,33 @@ It's called "Threat Modeling".
 
 it's supposed to be really helpful.
 
-`RPE` Ok, nice on a resume, cool to brag during interview people or chat over a beer, but
-what does it actually do ?
+`RPE` Ok, it sounds nice on a resume, and probably cool to brag during interview people or chat over a beer, but is it more than just BS ? What does it actually do for you ?
 
-`DPL` Well, you need to isolate, pick a small a small enoug sub-systems, within your overall solution. For the threat model to remain manageable, that is feasible within a projcet iteration sprint, and to be readable, understood by all.
+`DPL` Well, it gaves you a framework or rather an inventory of a sort to think about the security of your app. As you said, it is daunting task, so you need to isolate, pick a small a small enoug sub-systems, within your overall solution. For the threat model to remain manageable, that is feasible within a projcet iteration sprint, and to be readable, understood by all.
+
+`RPE` OK, I'm on board now. Let's say how to use this Threat modeling.
 
 Identify the threats: STRIDE
 -------
 
-`DPL` first step : identifying the threats
-and this model provides a mnemonic acronym to list the
-diffents categories of threats.
+`DPL` first step : identifying the threats. To do so, this model provides a mnemonic acronym to list the diffents categories of threats.
 
-`RPE` Ok, so we have not time to cover that - it would complete separate talk. Let's be practical,
-look at one them. For instance, what R stands for ?
+`RPE` Ok, so we have no time to cover all of that - it would complete separate talk. Let's be practical, let's look at one them. For instance, what this R stands for ?
 
-`DPL` the threat behind that is user denial (example)
+`DPL` the threat behind that is *user* denial (example)
 
-`RPE` How to fix or mitigate the impact as they say ?
+`RPE` And how to fix or mitigate the impact as they say ?
 
-`DPL` Audit trails prooving without doubt cred used
+`DPL` *Audit trails* proving without doubt cred used
 
 Assess the risks: DREAD
 -------
 
+`RPE` OK, now I got what STRIDE is, but what about this other fancy acronym, DREAD ?
+
 `DPL` key aspect => assess the risk business wise. thus DREAD providing a classification scheme
 
-`RPE` Damage meaning how bad would an attack be?
+`RPE` By damage, you mean how bad would an attack would be on our business? Let's go through, briefly each of those letter.
 
 `DPL` Reproducibility - how easy is it to reproduce the attack?
 
@@ -67,73 +60,73 @@ Assess the risks: DREAD
 
 `DPL` Id treats + risks behind helps to do ...
 
-`RPE` communication tool between top management and low level expert - making each other language
-understandeable by the other one
+`RPE` OK, what I really like about all of this is that it's a brilliant *communication tool* between top management and low level expert - making each other language
+understandeable by the other one. Sort of UML for security.
 
-DeepDive
+`DPL` Exactly.
+
+USe Case
 ---
 
-`RPE` Brilliant, we know where to start. let's take a look at our app, now.
-Let me guess, it does look fancy, is that a desktop app for creatives ?
+`RPE` Brilliant, we know where to start. But now, to be more concrete, let's take an application as use case.
 
-`RPE` let's Deep dive => it's a add placement, it's not marketing, high frequency trading
-not big data, hadoop, machine learning, not even social,...
+`DPL` Yes, let's assume we have a regular, web-based Java app. A simple thing being deployed as WAR.
 
-`RPE` Not going to help win followers on Twitter, or pick up girls at a local geeky bar or the local hackerspace. (don't laugh I've a girlfiends like that)
+`RPE` Yes, let's make it very simple. It does make any ads placement, it's not doing marketing, nor high frequency trading. No big data, hadoop, machine learning, not even social app,...
 
-Our Use Case
----
-#Cool
-`DPL` True, it's a good old fashion enterprise app. Quite boring to chat about over a beer.
+`DPL` Cool.
 
-`RPE` unless we throw some docker in 
+`RPE` A simple, internal, back end app, doing a mash up of internal data for your company employe. Nothing fancy.
 
-`DPL` we could, but I have better and trendier , heard about :
+`RPE` We are not going win followers on Twitter with this, neither pick up girls at FOSDEM we this thing
 
+`DPL` No, we won't.
 
-`RPE` Java framwork
+(pause)
+
+`DPL` So now, let's discuss a bit how this app is going to be designed.
+
+`RPE` Well, it's a Java app, so you have to throw in a shit load of frameworks right ? it's need to Hibernate the shit out of your play framework, while being build by Gradle, because Maven is as been... or the other way around ?
+
+`DPL` (rolleyes)
+
+`RPE` And like any other concern, security also have framework. They are many out there, but let's take a look at a rather famous, complete one: Spring Security.
 
 Spring Security 6mn
 ---
 
-`RPE` what was appealing to me in this stack was the spring sec plumbering coming with it.
-It brings solid foundation for ACL
+`DPL` OK,  I don't know anything about Java, so what this is doing for us ?
 
-`DPL` man in the middle attack
+`RPE` Well, it's actually quite  appealing. It brings a all stack with many sec plumbering being done for you. It gives you a very solid foundation to deal with authentification and access control.
 
-`RPE` Spring Secu supports HSTS - qui indique au client que seul https sera utilisé.
+`DPL` OK, but does is handles man in the middle attack, for instance ?
 
-`DPL` and what clickjacking ?
+`RPE` Yep, Spring Secu does support HSTS - which ensures to the clients that only HTTPS is being used.
 
-`RPE` frameOptions().sameOrigin()
+`DPL` And what clickjacking ?
+
+`RPE` Yep, it does it too. (frameOptions().sameOrigin())
 
 `DPL` and the infamous XSS attacks ?
 
-`RPE` that too - along Cross site scripting forgery, il me fournit une solution  à base crsf Token, in short - a shit load of fancy acronyms to brag at parties
+`RPE` that too - along Cross site scripting forgery, using CRSF Token.
 
-`DPL` yep, and let's not forget a skeleton for audit trails and security logging
+`DPL` yep, and let's not forget a skeleton for audit trails and security logging. Like the one you need to address the previously mentione R of STRIDE - repudiation threat.
 
-`DPL` like the one you need to address the previously mentione R of STRIDE - repudiation threat.
+`RPE` Yep, it also provides supports for that.
 
 pause
 
 Intranet
 ----
 
-`DPL` That being said, I'm not that worried in the end, because my app is only internal, well hidden
-within the confine of a compartimented VLAN, behind a bunch of firewalls.
+`DPL` That being said, we don't have to be to worried for our app... After all, it's only internal, well hidden within the confine of a compartimented VLAN, behind a bunch of firewalls. (ironic ton)
 
-`RPE` Yeeaaahhh, about that. Don't you think it's a bit naive of you ? I mean you do have user
-connectiong to your app from their laptop?
+`RPE` Yeahhh :) Let's be serious. You know like me that this app is going to be used by most employee, using their laptop or desktop machine, that are most likely unmanaged. Meaning, they have root access and install whatever malware they came across.
 
-`DPL` Yep, and also mobile+tablets
+`DPL` Yep, and also mobile+tablets, BYOD
 
-`RPE` of course they are... And from those, I'm guessing they also to the internet
-
-`DPL` I know where ur getting at - and to make it worse, some has even root privliges, plus not managed. BYOD example
-
-`RPE` Bring your own desaster! Bottom line is, internet is just a short
-hop away...
+`RPE` Not even talking about those indeed. And all those devices also access the internet in the same time. So basically, any hacker is only one jump away from our app.
 
 `DPL` But I don't have to worry - I got firewalls !!!! :D
 
@@ -142,55 +135,49 @@ Firewall 8mn
 
 `DPL` Well, fw are securing stuff, aren't they ? :)
 
-`RPE` No, they are not. FW blocks access to unused ports - but your app needs to be accessed, therefore
-the port to it needs to be open, isn't it ?
+`RPE` No, they are not. This is the most common misconception about FW. People thinks they provided security, while what they actually do is just QoS over the network.
+
+`DPL` That, you have to explain to me. Because I'm a security expert and I have deployed FW as part of my design.
+
+`RPE` As you should. But remember FW blocks access to some port right ?
+
+`DPL` Yes.
+
+`RPE` But generally those port are not used or not supposed to be used from an external point. But your app ports they need to be accessed, for your user to access the service, right ?
 
 `DPL` Yes
 
-`RPE` FW mostly aims are helping networking traffic, reducing unneeded load on the system. Its usual usage
-does not provide security to *your* app. It reduces DoS attacks, but does not protect apps itself.
+`RPE` So, you have to let this traffic goes throuhg. Which means that any potential hacks will go through this.
 
-`DPL` Ok. But my app has to be reachable to be used. The port can t be closed. 
+`DPL` OK, I see your point. But my app has to be reachable to be used. The port can t be closed.
 
-`RPE` You look at how they are used. If you open a port send mails, it should only have SMTP, for
-instance.
+`RPE` Exactly. So the real trick is to *analyze* and *monitoring* the content of this allowed traffic.For instance, if you have a port open to send email, it should only be used for SMTP.
+Sidenote about this. As a consultant I've been to many different IT, at many different companies. There, I generally graded how *ineffective* security was by the number of port being uselessly blocked.
 
-Sidenote about this, I generally grade how ineffective a security is by the number of port
-being uselessly blocked.
+`DPL` So if you couldn't get to your email using POP...
 
-`DPL` So if you can't get email using POP...
+`RPE` .. Bad!
 
-`RPE` .. Bad
+`DPL` If the IT were blocking your VPN ...
 
-`DPL` If IT blocks VPN ...
+`RPE` ... Extra bad!
 
-`RPE` ... same.
+`DPL` If you couldn't SSH to the system from your local network?
 
-`DPL` If I can't SSH to the system from my network?
+`RPE` ... even more of a bad mark.  And pointless, with a SSH outbound, you can connect to a remote server, and then piggy back your way inside the IT (to the audience - don't laugh, i've DONE that).
 
-`RPE` Worse and pointless, with a SSH outbound, you can connect to a remote server, and then piggy back
-your way inside the IT. However, with all those ports being closed or blocked, you did provide a
-very strong complete illusion of security.
+`DPL` However, with all those ports being closed or blocked, you did provide a very strong complete illusion of security
 
-`DPL` While making everyday tasks in the company, a living hell. (in the sake of security => bad
-usability).
+`RPE` While making everyday tasks in the company, a living hell. (in the sake of security => bad usability).
 
-`RPE` OK, so bottom line is the key to securing app is protocol and content filtering,
-
-in java apps we all have a Rpx in from of our systems so why not asking them to clean our the ...
-
+`RPE` OK, so bottom line is the key to securing app is protocol and content filtering. It's actually quite nice, because you reduce the scale of the attack a java dev has to worry about misusing the *expected* input data. Anything going beyond the scope of what the app should get will already be dropped by the filtering.
 
 Our Data 11mn
 =====
 
-`DPL` ok so filter content, clean but also need to returns data
+`DPL` ok so filter content, clean but also need to returns data, right ? And what about the confidentiality of those ?
 
-Our Data Encrypt
----
-
-`DPL` no business, no backend uber, no wire transfer - basically no fund to get hacked to the dark web
-
-`RPE` Always nice to have
+`RPE` No business, no backend uber, no wire transfer - basically no fund to get hacked to the dark web
 
 `DPL` But a nice data mash up, typical "employee productivity tool", such as
 
@@ -206,62 +193,79 @@ ping pong
 
 `DPL` OK, so we need to keep this secure
 
-`RPE` Which means encrypting all data that go through the system, from one end to an other.
+`RPE` Which means *encrypting* all data that go through the system, from one end to an other.
 
 Encrypt the front-end 12mn
 -------
 
 `DPL` ok, so first let's start by the front - no other way around it, I need to encrypt everything
-and use SSLde bout en bout, commencons alors par le front, on prévoit évidemment de tout servir en https
+and use SSL and HTTPS
 
-`RPE` Right, SSL is secure , but doing it correctly requires a lot of work - it's an art in itself.
+`RPE` Right, SSL is secure , it's easy to config - generally less than 10', but keeping it safe and running smoothly requires a *lot of work* - it's an art in itself.
 
-`DPL` And requires constant monitoring and following updates thoroughly. even the biggest companines
-must deals with crisis, certificates being compromised or propagtation of unauthorized certificates
+`DPL` Yes, it requires constant monitoring and following updates thoroughly. even the biggest companines must deals with crisis, certificates being compromised or propagtation of unauthorized certificates
 (but still trusted by most browser). And BTW, who spotted it. SSL it out.dated. It's TLS now :)
-
-`DPL` can your https server to detect new weakness and obsolete packages
 
 `RPE` ok, on the front, we're set and good. Let's look at the backend.
 
-Encryp the backend
--------
+(pause)
 
-`RPE` Recap => encrypt: App to DB
+Because, the communication between the app and your DB (either it's NoSQL à la mongo or some regular SQL db) can be spy-ed on. You need to ensure that no one can access privilged information nonetheless.
 
-`DPL` And also the *data* in the DB
+`DPL` some more encryption there, to set up and maintain.
 
-ref: hack ashley madison
+`RPE` But that's not all. The data lives in the DB. So on the system's storage. Hacker can potentially get access to the system running the DB.
+
+`DPL`So you may also need to encrypt data there. But you have to be smart about it. Encrypting everything has a definitive cost in performance and resource, but encrypting the *wrong* thing is even worse!
+
+`RPE` And a perfect, somewhat recent, example, is the hack of Ashley Madison. Remember, it was a "adult dating website"... where one could try to find a mistress online. And they did everything right, they did encrypt the user's password. But not their email nor physical adress, and real name. All one needed to blackmail you! And the hack actually led to people comitting suicide because of that!
+
+ref: http://money.cnn.com/2015/09/08/technology/ashley-madison-suicide/index.html
+
+(pause)
 
 2FA / SSO: 13mn
 ----
 
-`RPE` So for the users 
-2FAfor strong auth and SSO for confort
+`RPE` OK, so now our app have it Java framework to secure it's internal plumbering, all the communication have been secure by encryption, but legitimate users do need to connect to it, right ,
+
+`DPL` and yes, and they need to also to prove that they are legitimate users, so to ensure a strong authentification.
+
+`RPE` And this is where you need to have 2FA in place, not just simple password
+
+`DPL` or a lookup to the LDAP or Kerberos.
+
+`RPE` The issue is that 2FA can be quite uncomfortable for users. You need to always put out our token generator or your phone
+
+`DPL` And this is why having a proper  SSO solution in place is crucial.
+
+`RPE` Yes! Too often, security constraint are used to justify poor UX.
+
+(pause)
+
+`RPE` OK, now our app have been more/less secure. But nowdays, the battefield of security has extended quite a lot. People often don't realise it, but one can be attacked or hacked by other means than just exploiting a defect in the app.
 
 CI: 14mn
 =========
 
-`DPL` Nowadays CI holds secrets than can be used to hack app 
+`DPL` Nowadays CI holds secrets than can be used to hack app
 => needs to be secure too => battlefield has extended to encompass
 all chains
 New SPoF of our infra
 
-So secret can not be put in: code, configuration, 
+So secret can not be put in: code, configuration,
 
 Where do we put our secrets?
 
-`RPE` You need a dedicated tool for putting our secret in a Vault
+`RPE` Yes, this is core of the issue. Secret management is *not* easy. And in these day and age, you need automation and thus a dedicated tool to manage those (like Ansible Vault)
 
-secret management is not easy
+`DPL` But the secrets are not the only weakness.
 
-`DPL` But the secrets are not the only weakness. 
-
-`RPE` CI is about building you app and 99% of your app is not your code. Dependencies... from the Internet that you trust obviously... :)
+`RPE` Indeed! CI is all about building your app and 99% of your app is *not* your code. Dependencies are fetch from all over the place... and this from the Internet - that you then trust implicitly!
 
 `DPL` mirror all you get, and check the checksum.
 
-`RPE` model pushed by RH with Satelite, Java/Nexus
+`RPE` which, btw, has been the model pushed by Red Hat with Satelite for years, but also in the Java world with repository such as Nexus, Artifactory and so on.
 
 `DPL` Well manage your artifacts!
 
@@ -270,38 +274,48 @@ pause
 cloud: 17mn
 ----
 
-`RPE` wrap up: App built! Let's deploy?
+`RPE` OK, so our app have been built with security in mind, its internal behavior is secure by Spring security, we ensure strong authentification with 2FA and ensure a good user experience with SSO. Last, we secured the CI env and now our app is built, and ready to be deployed. So... let's go and deploy it ?
 
 `DPL` where?
 
-`RPE` I don't to manage this shit. We go to the cloud.
+`RPE` I don't to manage this shit. Let's do what the cool kids are all doing - going "cloud native".
 
 `DPL` Now you want to trust someone else conputer?
 
-`RPE` don't be, cloud forces u to be more secure, system always rebuild
+`RPE` Well, actually, using the cloud might be more secure that your own computer. Cloud deployment forces to update your system,and you are constantly building, fresh version of your system.
 
 `DPL` which is better than 10y old sys with no patches
 
-`RPE` netflix story
+`RPE` true story, look at netflix story about this (chaos monkey)
 
 `DPL` And your are still not safe: look at Meltdown. It's still not fixed.
 
-`RPE` Shortly: be ready to be hacked.
+`RPE` Which bring us to our next, and most important point. You need to not only prepare your security but also be ready to be hacked.
 
 Firefigthers: 19mn
 ----
 
-`RPE` github story
+`RPE` A few years ago, now, Github had a massive DDOS attacked against them. They even kept their users informed through their twitter account. They were both very transparent about it but also actively fighting off the attack. Their team were both prepared to be hack and ready to react accordingly.
 
 `DPL` status page sB
 
-`RPE` Equifax
+`RPE` This kind of transparency is actually crucial. Look at the mess Equifax did in the US by *not* communicating immediatly about their breach. They have endangered millions of people credit rating and the fact that the breach was hidden, did not end up helping it resolve it quickly.
 
 `DPL` The question is not if but when.
 
-`RPE` And real fire fighter and contiunously training.
+`RPE` Likel fire fighter, who are contiunously training to fight fire, your team needs to be ready to actively face an attack.
 
-So define what you are suppose to do and check for it. This is the model of SELinux,
+`DPL` Yes, but one can be ready ?
+
+`RPE` Like a fire in a building you want to have fireproof door, smoke detector and emergency stairs case.
+
+(ping pong)
+
+`DPL` Which translate, in IT terms, in solution like Satan, SE Linux, and its Java counter part, the infamous Security Manager!
+
+`RPE` (Satan), an IDS which like a smoke detector , will allow to you know if you are being attacked
+      (SELinux), which is your best line of defense against a breach - it will ensure the hacked has very limited option from the point of penetration
+      (Security Manager) exactly the same as a SELinux, but on the JVM level - who here is NOT using the security manager ?
 
 `RPE` OK, so time to wrap up - what did we talk about during all this time:
 
