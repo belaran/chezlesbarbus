@@ -114,24 +114,25 @@ Spring Security 6mn
 
 `RPE` that too - along Cross site scripting forgery, using CRSF Token.
 
-`DPL` yep, and let's not forget a skeleton for audit trails and security logging. Like the one you need to address the previously mentione R of STRIDE - repudiation threat.
+`DPL` yep, and let's not forget a skeleton for audit trails and security logging.
 
-`RPE` Yep, it also provides supports for that...
+`RPE` Like the one you need to address the previously mentione R of STRIDE - repudiation threat. Yes! it also provides supports for that...
 
 (pause)
 
-`RPE` But the bottom line here is that there is a lot of security threats to a web app nowdays, and you probably needs something like Spring Security to help you deal with all of those.
+`RPE` Bottom line is that there is a lot of security *threats* to a web app nowdays, and you'll need something like Spring Security to help you ensure your webapp is able to cope with those.
 
 Intranet
 ----
 
-`DPL` That being said, we don't have to be to worried for our app... After all, it's only internal, right ? It's thus well hidden within the confine of a compartimented VLAN, behind a bunch of firewalls. (ironic ton)
+`RPE` That being said, we don't have to be to worried for our app... After all, it's only internal, right ? It's thus well hidden within the confine of a compartimented VLAN, behind a bunch of firewalls. (ironic ton)
 
-`RPE` Yeahhh :) Let's be serious. You know like me that this app is going to be used by most employee, using their laptop or desktop machine, that are most likely unmanaged. Meaning, they have root access and install whatever malware they came across.
+`DPL` Yeahhh :) Let's be serious. You know like me that this app is going to be used by most employee, using their laptop or desktop machine, that are most likely unmanaged. Meaning, they have root access and install whatever malware they came across.
 
-`DPL` Yep, and also mobile+tablets, BYOD
-YYYYYY
-DESASTERS
+`RPE` Not even,  mobile+tablets,
+
+`DPL` BYOD
+
 `RPE` ... And all those devices also access the internet in the same time. So basically, any hacker is only one hop away from our so called secure internal app.
 
 `DPL` But I don't have to worry - I got firewalls !!!! :D
