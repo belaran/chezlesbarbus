@@ -26,7 +26,7 @@ it's supposed to be really helpful.
 `RPE` Ok, it sounds nice to have on a resume. And probably cool to brag during interview, or with people over a beer, but is it more than just some usual BS ? What does it do for you ?
 
 `DPL` Well, it gaves you a framework or rather an inventory of a sort to think about the security of your app. As you said, it is daunting task, so you need to isolate, pick a small a small enoug sub-systems, within your overall solution. For the threat model to remain manageable, that is feasible within a projcet iteration sprint, and to be readable, understood by all.
-
+YYYY
 `RPE` OK, I'm on board now. Let's say how to use this Threat modeling.
 
 Identify the threats: STRIDE
@@ -48,7 +48,7 @@ Assess the risks: DREAD 03:00
 `RPE` OK, now I got what STRIDE is, in the broad sense, but what about this other fancy acronym, DREAD ?
 
 `DPL` key aspect => assess the risk business wise. thus DREAD providing a classification scheme
-
+YYYYYY
 `RPE` By damage, you mean how bad would an attack would be on our business?
 
 `DPL` Exactly.
@@ -64,6 +64,7 @@ Assess the risks: DREAD 03:00
 `RPE` Discoverability - how easy is it to discover the threat?
 
 `DPL` Id treats + risks behind helps to do ...
+YYYYYY
 
 `RPE` OK, what I really like about all of this is that it's a brilliant *communication tool* between top management and low level expert - making each other language
 understandeable by the other one. Sort of UML for security.
@@ -76,6 +77,7 @@ USe Case
 `RPE` Brilliant, now we know where to start. So let's talk application in a bit more concrete manner. Let's see describ a potential use case for an app.
 
 `DPL` Yes, let's assume we have a regular, web-based Java app. A simple thing being deployed as WAR.
+A simple WAR file
 
 `RPE` Let's make it very simple. An internal app for employee, nothing sexy, nor fancy: it does make any ads placement, it's not doing marketing, nor high frequency trading. No big data, hadoop, machine learning, not even social app,...
 
@@ -88,7 +90,7 @@ USe Case
 (pause)
 
 `DPL` So now, let's discuss a bit how this app is going to be designed.
-
+YYYYY Merge?
 `RPE` Well, it's a Java app, so you have to throw in a shit load of frameworks right ? it's need to Hibernate the shit out of your Play framework, right ? It also needs to build by Gradle, because Maven is for has been.. And so on...
 
 `DPL` (rolleyes)
@@ -115,8 +117,13 @@ Spring Security 6mn
 `RPE` that too - along Cross site scripting forgery, using CRSF Token.
 
 `DPL` yep, and let's not forget a skeleton for audit trails and security logging. Like the one you need to address the previously mentione R of STRIDE - repudiation threat.
+<<<<<<< Updated upstream
 
 `RPE` Yep, it also provides supports for that...
+=======
+YYYYYY
+`RPE` Yep, it also provides supports for that But the bottom line here is that there is a lot of security threats to a web app nowdays, and you probably needs something like Spring Security to help you deal with all of those.
+>>>>>>> Stashed changes
 
 (pause)
 
@@ -130,7 +137,8 @@ Intranet
 `RPE` Yeahhh :) Let's be serious. You know like me that this app is going to be used by most employee, using their laptop or desktop machine, that are most likely unmanaged. Meaning, they have root access and install whatever malware they came across.
 
 `DPL` Yep, and also mobile+tablets, BYOD
-
+YYYYYY
+DESASTERS
 `RPE` ... And all those devices also access the internet in the same time. So basically, any hacker is only one hop away from our so called secure internal app.
 
 `DPL` But I don't have to worry - I got firewalls !!!! :D
@@ -207,7 +215,7 @@ Encrypt the front-end 12mn
 `DPL` ok, so first let's start by the front - no other way around it, we need to encrypt everything and use SSL and HTTPS
 
 `RPE` Right, SSL is secure , it's easy to configure - generally less than 10'. But keeping it safe and running smoothly requires a *lot of work* - it's an art in itself.
-
+YYYYY -> rewrite this 
 `DPL` Yes, it requires constant monitoring and following updates thoroughly. even the biggest companines must deals with crisis, certificates being compromised or propagtation of unauthorized certificates.
 
 (but still trusted by most browser). And BTW, who spotted it. SSL it out.dated. It's TLS now :)
@@ -224,6 +232,7 @@ Because, the communication between the app and your DB (either it's NoSQL à la 
 
 `DPL` So you may also need to encrypt data there. But you have to be smart about it. Encrypting everything has a definitive cost in performance and resource, but encrypting the *wrong* thing is even worse!
 
+YYYYYY: encrypted password! Hashed!
 `RPE` And a perfect, somewhat recent, example, is the hack of Ashley Madison. Remember, it was a "adult dating website"... where one could try to find a mistress online. And they did everything right, they did encrypt the user's password. But not their email nor physical adress, and real name. All one needed to blackmail you! And the hack actually led to people comitting suicide because of that!
 
 ref: http://money.cnn.com/2015/09/08/technology/ashley-madison-suicide/index.html
@@ -316,7 +325,7 @@ Firefigthers: 19mn
 `DPL` status page sB
 
 `RPE` This kind of transparency is actually crucial. Look at the mess Equifax did in the US by *not* communicating immediatly about their breach. They have endangered millions of people credit rating and the fact that the breach was hidden, did not end up helping it resolve it quickly.
-
+YYYYYY
 `DPL` The question is not if but when.
 
 `RPE` Likel fire fighter, who are contiunously training to fight fire, your team needs to be ready to actively face an attack.
@@ -327,7 +336,13 @@ Firefigthers: 19mn
 
 (ping pong)
 
+<<<<<<< Updated upstream
 `DPl` (Satan), an IDS which like a smoke detector , will allow to you know if you are being attacked
+=======
+`DPL` Which translate, in IT terms, in solution like IDS, SE Linux, and its Java counter part, the infamous Security Manager!
+
+`RPE` (Satan), an IDS which like a smoke detector , will allow to you know if you are being attacked
+>>>>>>> Stashed changes
       (SELinux), which is your best line of defense against a breach - it will ensure the hacked has very limited option from the point of penetration
       (Security Manager) exactly the same as a SELinux, but on the JVM level - who here is NOT using the security manager ?
 
