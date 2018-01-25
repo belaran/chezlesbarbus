@@ -47,8 +47,8 @@ Assess the risks: DREAD 03:00
 
 `RPE` OK, now I got what STRIDE is, in the broad sense, but what about this other fancy acronym, DREAD ?
 
-`DPL` key aspect => assess the risk business wise. thus DREAD providing a classification scheme
-YYYYYY
+`DPL` DREAD is ment to describe risks in a language understanable by the company in order to assess them by understanding the possible damages.
+
 `RPE` By damage, you mean how bad would an attack would be on our business?
 
 `DPL` Exactly.
