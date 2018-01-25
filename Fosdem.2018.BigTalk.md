@@ -3,11 +3,13 @@ Hello
 
 `DPL` Hi everybody ! Welcome to Hairy Security. I'm Damien. I'm a security specialist who knows nothing about Java...
 
-`RPE` ... and I'm Romain. People think I'm a Java expert, but security is not field of expertise. Together, we are going to talk about security, or rather how to integrate security consideration, during you development process.
+`RPE` ... and I'm Romain. People think I'm a Java expert, but security is not field of expertise.
 
-`DPL` So you have Continuous Integration and we add Security... let's call it continuous security.
+`DPL` Together, we are going to talk about security, or rather how to integrate security consideration, during you development process.
 
-`RPE` Exaclty. That being said, where do we start? Because security is a rather broad topic to say the least ? For many java dev or architect it is a daunting task !
+(pause)
+
+`RPE` Where do we start? Because security is a rather broad topic to say the least ?
 
 Threat Modeling 01:00
 --------
