@@ -16,12 +16,15 @@ Threat Modeling 01:00
 
 `RPE` How to deal with such a large scope?
 
-`DPL` There is solutions for that, one of them being Threat Modelling from M$ and OWASP.
+`DPL` There are solutions for that, one of them being Threat Modelling from M$ and OWASP.
 
 `RPE` Ok, it sounds nice to have on a resume. And probably cool to brag during interview, or with people over a beer, but is it more than just some usual BS ? What does it do for you ?
 
-`DPL` Well, it gaves you a framework or rather an inventory of a sort to think about the security of your app. As you said, it is daunting task, so you need to isolate, pick a small a small enoug sub-systems, within your overall solution. For the threat model to remain manageable, that is feasible within a projcet iteration sprint, and to be readable, understood by all.
-YYYY
+`DPL` Well, it gaves you a framework or rather an inventory of things to concider about the security of your app.
+It is a daunting task.
+You need to isolate, pick a small sub-systems, within your application.
+And then you'll be able to keep the threat model undercontrol and manageable.
+It can even fit in your sprints, and to be readable, understood by all.
 
 `RPE` OK, I'm on board now. Let's say how to use this Threat modeling.
 
