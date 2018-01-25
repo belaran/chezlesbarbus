@@ -5,7 +5,7 @@ Hello
 
 `RPE` ... and I'm Romain. People think I'm a Java expert, but security is not field of expertise. Together, we are going to talk about security, or rather how to integrate security consideration, during you development process.
 
-`DPL` Sort of doing something akin to "Continous Security" - pretty much like you already probably do with Continuous Integration.
+`DPL` So you have Continuous Integration and we add Security... let's call it continuous security.
 
 `RPE` Exaclty. That being said, where do we start? Because security is a rather broad topic to say the least ? For many java dev or architect it is a daunting task !
 
