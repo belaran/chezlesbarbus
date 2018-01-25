@@ -119,7 +119,7 @@ Spring Security 6mn
 `RPE` that too - along Cross site scripting forgery, using CRSF Token.
 
 `DPL` yep, and let's not forget a skeleton for audit trails and security logging.
-YYYY And tell me there are...
+
 `RPE` Like the one you need to address the previously mentione R of STRIDE - repudiation threat. Yes! it also provides supports for that...
 
 (pause)
@@ -174,11 +174,11 @@ Sidenote about this. As a consultant I've been to many different IT, at many dif
 
 `RPE` ... Stupidly bad! I need it to work with Red Hat
 
-`DPL` If you couldn't SSH to the system from your local network?
-YYYYY one user can do it
+`DPL` And no SSH access for you, just for an other user they trust,
+
 `RPE` ... even more stupidfly bad and also pointless, with a SSH outbound, you can connect to a remote server, and then piggy back your way inside the IT (to the audience) - don't laugh, i've actually DONE that at some customers site.
-YYYY no however
-`DPL` However, with all those ports being closed or blocked, you did provide a very strong complete illusion of security
+
+`DPL` With all those ports being closed or blocked, you did provide a perfect illusion of security
 
 `RPE` ... While making everyday tasks in the company, a living hell. (in the sake of security => bad usability).
 
