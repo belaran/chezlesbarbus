@@ -116,13 +116,8 @@ Spring Security 6mn
 `RPE` that too - along Cross site scripting forgery, using CRSF Token.
 
 `DPL` yep, and let's not forget a skeleton for audit trails and security logging. Like the one you need to address the previously mentione R of STRIDE - repudiation threat.
-<<<<<<< Updated upstream
 
 `RPE` Yep, it also provides supports for that...
-=======
-YYYYYY
-`RPE` Yep, it also provides supports for that But the bottom line here is that there is a lot of security threats to a web app nowdays, and you probably needs something like Spring Security to help you deal with all of those.
->>>>>>> Stashed changes
 
 (pause)
 
@@ -335,13 +330,9 @@ YYYYYY
 
 (ping pong)
 
-<<<<<<< Updated upstream
-`DPl` (Satan), an IDS which like a smoke detector , will allow to you know if you are being attacked
-=======
 `DPL` Which translate, in IT terms, in solution like IDS, SE Linux, and its Java counter part, the infamous Security Manager!
 
 `RPE` (Satan), an IDS which like a smoke detector , will allow to you know if you are being attacked
->>>>>>> Stashed changes
       (SELinux), which is your best line of defense against a breach - it will ensure the hacked has very limited option from the point of penetration
       (Security Manager) exactly the same as a SELinux, but on the JVM level - who here is NOT using the security manager ?
 
