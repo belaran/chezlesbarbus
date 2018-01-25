@@ -12,21 +12,17 @@ Hello
 Threat Modeling 01:00
 --------
 
-TO SPLIT
 `DPL` Indeed. Security is continuous process, touch any and all level, needs to have a global vision
-but I wondered should we deal with such a large scope ?
-I seeked for help.
-I've been told to look into an interesting.
-methodology pushed from M$ and OWASP.
 
-It's called "Threat Modeling".
+`RPE` How to deal with such a large scope?
 
-it's supposed to be really helpful.
+`DPL` There is solutions for that, one of them being Threat Modelling from M$ and OWASP.
 
 `RPE` Ok, it sounds nice to have on a resume. And probably cool to brag during interview, or with people over a beer, but is it more than just some usual BS ? What does it do for you ?
 
 `DPL` Well, it gaves you a framework or rather an inventory of a sort to think about the security of your app. As you said, it is daunting task, so you need to isolate, pick a small a small enoug sub-systems, within your overall solution. For the threat model to remain manageable, that is feasible within a projcet iteration sprint, and to be readable, understood by all.
 YYYY
+
 `RPE` OK, I'm on board now. Let's say how to use this Threat modeling.
 
 Identify the threats: STRIDE
@@ -215,7 +211,7 @@ Encrypt the front-end 12mn
 `DPL` ok, so first let's start by the front - no other way around it, we need to encrypt everything and use SSL and HTTPS
 
 `RPE` Right, SSL is secure , it's easy to configure - generally less than 10'. But keeping it safe and running smoothly requires a *lot of work* - it's an art in itself.
-YYYYY -> rewrite this 
+YYYYY -> rewrite this
 `DPL` Yes, it requires constant monitoring and following updates thoroughly. even the biggest companines must deals with crisis, certificates being compromised or propagtation of unauthorized certificates.
 
 (but still trusted by most browser). And BTW, who spotted it. SSL it out.dated. It's TLS now :)
