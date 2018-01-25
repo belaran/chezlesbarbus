@@ -23,9 +23,10 @@ Threat Modeling 01:00
 `DPL` Well, it gaves you a framework or rather an inventory of things to consider about the security of your app.
 It is a daunting task.
 You need to isolate, pick a small sub-systems, within your application.
-SPLIT
-And then you'll be able to keep the threat model undercontrol and manageable.
-It can even fit in your sprints, and to be readable, understood by all.
+
+`RPE` Oh, OK, so it helps you to keep the threat model undercontrol and manageable.
+
+`DPL` Yes and it can even fit in your sprints, and to be readable, understood by all.
 
 `RPE` OK, I'm on board now. Let's say how to use this Threat modeling.
 
