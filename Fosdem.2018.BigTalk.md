@@ -209,10 +209,12 @@ Encrypt the front-end 12mn
 `DPL` ok, so first let's start by the front - no other way around it, we need to encrypt everything and use SSL and HTTPS
 
 `RPE` Right, SSL is secure , it's easy to configure - generally less than 10'. But keeping it safe and running smoothly requires a *lot of work* - it's an art in itself.
-YYYYY -> rewrite this
-`DPL` Yes, it requires constant monitoring and following updates thoroughly. even the biggest companines must deals with crisis, certificates being compromised or propagtation of unauthorized certificates.
 
-(but still trusted by most browser). And BTW, who spotted it. SSL it out.dated. It's TLS now :)
+`DPL` Yes, it's heavy. It's something you will do only once a year and if you fail you take all your clients down but you don't know it. I'm not even talking about a compromised or leaked certificate.
+
+`RPE` Ok so with SSL we are safe
+
+`DPL` BTW, who spotted it? SSL it outdated. It's TLS now :)
 
 `RPE` ok, on the front, we're good. Let's look at the backend.
 
@@ -226,8 +228,7 @@ Because, the communication between the app and your DB (either it's NoSQL à la 
 
 `DPL` So you may also need to encrypt data there. But you have to be smart about it. Encrypting everything has a definitive cost in performance and resource, but encrypting the *wrong* thing is even worse!
 
-YYYYYY: encrypted password! Hashed!
-`RPE` And a perfect, somewhat recent, example, is the hack of Ashley Madison. Remember, it was a "adult dating website"... where one could try to find a mistress online. And they did everything right, they did encrypt the user's password. But not their email nor physical adress, and real name. All one needed to blackmail you! And the hack actually led to people comitting suicide because of that!
+`RPE` And a perfect, somewhat recent, example, is the hack of Ashley Madison. Remember, it was a "adult dating website"... where one could try to find a mistress online. And they did everything right, they did hash the user's password. But not their email nor physical adress, and real name. All one needed to blackmail you! And the hack actually led to people comitting suicide because of that!
 
 ref: http://money.cnn.com/2015/09/08/technology/ashley-madison-suicide/index.html
 
@@ -319,8 +320,8 @@ Firefigthers: 19mn
 `DPL` status page sB
 
 `RPE` This kind of transparency is actually crucial. Look at the mess Equifax did in the US by *not* communicating immediatly about their breach. They have endangered millions of people credit rating and the fact that the breach was hidden, did not end up helping it resolve it quickly.
-YYYYYY
-`DPL` The question is not if but when.
+
+`DPL` The question is not if you are hacked but when you are hacked.
 
 `RPE` Likel fire fighter, who are contiunously training to fight fire, your team needs to be ready to actively face an attack.
 
