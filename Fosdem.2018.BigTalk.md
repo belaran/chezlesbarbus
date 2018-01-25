@@ -14,7 +14,7 @@ Hello
 Threat Modeling 01:00
 --------
 
-`DPL` Indeed. Security is continuous process, touch any and all level, needs to have a global vision
+`DPL` Indeed. Security is continuous process, touch any and all levels, needs to have a global vision
 
 `RPE` How to deal with such a large scope?
 
