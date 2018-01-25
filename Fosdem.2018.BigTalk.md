@@ -14,7 +14,7 @@ Hello
 Threat Modeling 01:00
 --------
 
-`DPL` Indeed. Security is continuous process, touch any and all levels, needs to have a global vision
+`DPL` Indeed. Security is continuous process, touch any and all levels
 
 `RPE` How to deal with such a large scope?
 
@@ -47,14 +47,12 @@ Identify the threats: STRIDE
 
 `DPL` *Audit trails* proving without doubt cred used
 
-`RPE` TODO: bad user
-
 Assess the risks: DREAD 03:00
 -------
 
 `RPE` OK, now I got what STRIDE is, in the broad sense, but what about this other fancy acronym, DREAD ?
 
-`DPL` DREAD is ment to describe risks in a language understanable by the company in order to assess them by understanding the possible damages.
+`DPL` DREAD is meant to describe risks in a language understanable by the company in order to assess them by understanding the possible damages.
 
 `RPE` By damage, you mean how bad would an attack would be on our business?
 
@@ -133,7 +131,7 @@ Spring Security 6mn
 
 (pause)
 
-Intranet
+Intranet 06:00
 ----
 
 `RPE` That being said, we don't have to be to worried for our app... After all, it's only internal, right ? It's thus well hidden within the confine of a compartimented VLAN, behind a bunch of firewalls.
@@ -177,7 +175,7 @@ Sidenote about this. As a consultant I've been to many different IT, at many dif
 
 `DPL` If the IT were blocking your VPN ...
 
-`RPE` ... Stupidly bad! I need it to work with Red Hat
+`RPE` ... Stupidly bad! I need my VPN for Red Hat to help you!
 
 `DPL` And no SSH access for you, just for an other user they trust,
 
@@ -225,9 +223,9 @@ Encrypt the front-end 12mn
 
 `DPL` Yes, it's heavy. It's something you will do only once a year and if you fail you take all your clients down but you don't even know it. I'm not even talking about a compromised or leaked certificate.
 
-`RPE` Ok, but let's say we did that... We're good now, right ? SSL we are safe
+`RPE` Ok, but let's say we did that... We're good now, right? SSL is safe?
 
-`DPL` BTW, who spotted it? SSL it outdated. It's TLS now :)
+`DPL` Well, no, SSL it outdated. It's TLS now :)
 
 `RPE` ok, on the front, we're good. Let's look at the backend.
 
@@ -270,7 +268,7 @@ ref: http://money.cnn.com/2015/09/08/technology/ashley-madison-suicide/index.htm
 
 `RPE` example
 
-`DPL` Yes, security constraint are used to justify poor UX - like Slack.
+`DPL` Yes, this is why security constraint can NOT be used to justify poor UX - look at Slack, for instance. You don't even a password, and it's still secured!
 
 (pause)
 
