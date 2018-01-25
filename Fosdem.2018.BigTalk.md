@@ -9,9 +9,10 @@ Hello
 
 `RPE` Exaclty. That being said, where do we start? Because security is a rather broad topic to say the least ? For many java dev or architect it is a daunting task !
 
-Threat Modeling
+Threat Modeling 01:00
 --------
 
+TO SPLIT
 `DPL` Indeed. Security is continuous process, touch any and all level, needs to have a global vision
 but I wondered should we deal with such a large scope ?
 I seeked for help.
@@ -41,7 +42,7 @@ Identify the threats: STRIDE
 
 `DPL` *Audit trails* proving without doubt cred used
 
-Assess the risks: DREAD
+Assess the risks: DREAD 03:00
 -------
 
 `RPE` OK, now I got what STRIDE is, in the broad sense, but what about this other fancy acronym, DREAD ?
@@ -115,9 +116,11 @@ Spring Security 6mn
 
 `DPL` yep, and let's not forget a skeleton for audit trails and security logging. Like the one you need to address the previously mentione R of STRIDE - repudiation threat.
 
-`RPE` Yep, it also provides supports for that But the bottom line here is that there is a lot of security threats to a web app nowdays, and you probably needs something like Spring Security to help you deal with all of those.
+`RPE` Yep, it also provides supports for that...
 
 (pause)
+
+`RPE` But the bottom line here is that there is a lot of security threats to a web app nowdays, and you probably needs something like Spring Security to help you deal with all of those.
 
 Intranet
 ----
@@ -171,16 +174,18 @@ Sidenote about this. As a consultant I've been to many different IT, at many dif
 
 `RPE` ... While making everyday tasks in the company, a living hell. (in the sake of security => bad usability).
 
-`RPE` OK, so bottom line is the key to securing app is protocol and content filtering. It's actually quite nice, because you reduce the scale of the attack a java dev has to worry about misusing the *expected* input data. Anything going beyond the scope of what the app should get will already be dropped by the filtering.
+`DPL` OK, so bottom line is the key to securing app is protocol and content filtering. It's actually quite nice, because you reduce the scale of the attack a java dev has to worry about misusing the *expected* input data. Anything going beyond the scope of what the app should get will already be dropped by the filtering.
+
+(pause)
 
 Our Data 11mn
 =====
 
-`DPL` ok so filter content, got it. But also need to returns data, right ? So what about the confidentiality of those ?
+`RPE` Now, let talk about data...
 
-`RPE` In our use case, we have no business, no backend uber, no wire transfer - basically no fund to get hacked to the dark web
+`DPL` In our use case, we have no business, no backend uber, no wire transfer - basically no fund to get hacked to the dark web
 
-`DPL` But we said it's a  typical "employee productivity tool", so it has data such as
+`RPE` But we said it's a  typical "employee productivity tool", so it has data such as
 
 * employee address, phonee number
 * salaries, financial package
@@ -236,9 +241,13 @@ ref: http://money.cnn.com/2015/09/08/technology/ashley-madison-suicide/index.htm
 
 `DPL` or a lookup to the LDAP or Kerberos.
 
+`RPE` But, btw what is 2FA ?
+
+`DPL` (damien explains)
+
 `RPE` 2FA is the only real way to have strong authentification, but one of the issue with it, it that can be quite uncomfortable for users. You need to always put out our token generator or your phone, and thus many users are fighting it, arguing it harms their productivity.
 
-`DPL` And this is why you also need to have a proper SSO solution in place.
+`DPL` And this is why you also need to have a proper SSO solution in place (to explain).
 
 `RPE` Yes! Too often, security constraint are used to justify poor UX.
 
@@ -297,6 +306,8 @@ cloud: 17mn
 
 `RPE` ...Which bring us to our next, and most important point. Security is not only about patching and being up to date. It's also about being *ready* to be hacked.
 
+(pause)
+
 Firefigthers: 19mn
 ----
 
@@ -312,17 +323,17 @@ Firefigthers: 19mn
 
 `DPL` Yes, but one can be ready ?
 
-`RPE` Like a fire in a building you want to have fireproof door, smoke detector and emergency stairs case.
+`RPE` Like a fire in a building you want to have smoking detector and fireproof door.
 
 (ping pong)
 
-`DPL` Which translate, in IT terms, in solution like Satan, SE Linux, and its Java counter part, the infamous Security Manager!
-
-`RPE` (Satan), an IDS which like a smoke detector , will allow to you know if you are being attacked
+`DPl` (Satan), an IDS which like a smoke detector , will allow to you know if you are being attacked
       (SELinux), which is your best line of defense against a breach - it will ensure the hacked has very limited option from the point of penetration
       (Security Manager) exactly the same as a SELinux, but on the JVM level - who here is NOT using the security manager ?
 
-`RPE` OK, so time to wrap up - what did we talk about during all this time:
+`DPL` container security
+
+`RPE` OK, so time to wrap up - what did we talk about during all this time.
 
 Conclusion: 22mn
 ==========
@@ -335,16 +346,18 @@ Conclusion: 22mn
 
 `RPE` your data is not safe either
 
-`DPL` ...so encrypt
+`DPL` ...so encrypt what needs to...
 
-`RPE` which means management secrets used 2FA
+`RPE` which means management secrets used strong auth 2FA
 
-`DPL` ..with SSO because: useability is not excuse for lack of security - and security is not an excuse for a lack useability
+`DPL` ..with SSO because: useability is not excuse for lack of security -
 
-`RPE` Also don't forget that the battefield has extended to new territories
+`RPE` ... and security is not an excuse for a lack useability
 
-`DPL` such as continuous integration, delivery and cloud
+`DPL` Also don't forget that the battefield has extended to new territories
 
-`RPE` finally, be *ready* to fight fire - because you are going to be haked
+`RPE` such as continuous integration, delivery and cloud
 
-`DPL` ... or you are already.
+`DPL` finally, be *ready* to fight fire - because you are going to be haked
+
+`RPE` ... or you are already?
