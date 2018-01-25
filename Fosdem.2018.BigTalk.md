@@ -62,8 +62,7 @@ Assess the risks: DREAD 03:00
 
 `RPE` Discoverability - how easy is it to discover the threat?
 
-`DPL` Id treats + risks behind helps to do ...
-YYYYYY
+`DPL` So the goal is to identify risk and measure the risk behing the threat.
 
 `RPE` OK, what I really like about all of this is that it's a brilliant *communication tool* between top management and low level expert - making each other language
 understandeable by the other one. Sort of UML for security.
@@ -89,7 +88,7 @@ A simple WAR file
 (pause)
 
 `DPL` So now, let's discuss a bit how this app is going to be designed.
-YYYYY Merge?
+
 `RPE` Well, it's a Java app, so you have to throw in a shit load of frameworks right ? it's need to Hibernate the shit out of your Play framework, right ? It also needs to build by Gradle, because Maven is for has been.. And so on...
 
 `DPL` (rolleyes)
