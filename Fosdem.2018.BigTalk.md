@@ -32,10 +32,12 @@ You need to isolate, pick a small sub-systems, within your application.
 
 `RPE` OK, I'm on board now. Let's say how to use this Threat modeling.
 
+`DPL` Let's say there are two parts: STRIDE and DREAD.
+
 Identify the threats: STRIDE
 -------
 
-`DPL` first step : identifying the threats. To do so, this model provides a mnemonic acronym to list the diffents categories of threats.
+`DPL` first step : identifying the threats by categories.
 
 `RPE` Ok, so we have no time to cover all of that - it would complete separate talk. Let's be practical, let's look at one them. For instance, what this R stands for ?
 
@@ -69,7 +71,7 @@ Assess the risks: DREAD 03:00
 
 `RPE` Discoverability - how easy is it to discover the threat?
 
-`DPL` So the goal is to identify risk and measure the risk behing the threat.
+`DPL` So the goal is to identify and measure the risk behing the threat.
 
 `RPE` OK, what I really like about all of this is that it's a brilliant *communication tool* between top management and low level expert - making each other language
 understandeable by the other one. Sort of UML for security.
@@ -121,7 +123,7 @@ Spring Security 6mn
 
 `RPE` that too - along Cross site scripting forgery, using CRSF Token.
 
-`DPL` yep, and let's not forget a skeleton for audit trails and security logging.
+`DPL` yep, and don't forget a skeleton for audit trails and security logging.
 
 `RPE` Like the one you need to address the previously mentione R of STRIDE - repudiation threat. Yes! it also provides supports for that...
 
@@ -150,7 +152,7 @@ Firewall 8mn
 ---------
 
 `RPE` Yes, this is the most common misconception about FW. People thinks they provided security, while what they actually do is just QoS over the network.
-YYYY
+
 `DPL` That, you have to explain to me. Because I'm a security expert and I have deployed FW as part of my design.
 
 `RPE` As you should. But remember FW blocks access to some port right ?
