@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .big-list { font-size:200%; }
+      .bigger-list { font-size: 280%; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Hairy Security - The many threats to your webapp
+
+* Damien Plard (XXX @Softbank) - A security specialist who don't get Java
+
+* Romain Pelisse (Sustain Developer @Red Hat) - A so called Java developer who knows even less on security
+
+---
+
+class: bigger-list
+
+# Threats Modeling - STRIDE
+
+* **S**poofing Identity
+* **T**ampering with Data
+* **R**epudiation
+* **I**nformation Disclosure
+* **D**enial of Service
+* **E**levation of Privilege
+
+---
+
+class: bigger-list
+
+# Threats Modeling - DREAD
+
+* **D**amage Potential
+* **R**eproducibility
+* **E**xploitability
+* **A**ffected Users
+* **D**iscoverability
+
+---
+
+# Use Case - a simple WebApp
+
+
+---
+
+# Frameworking your way out of security...
+
+.center[![Spring Security Logo](img/spring-security.logo.png)]
+
+---
+
+# Safe(r?) Intranet
+
+.center[![Spring Security Logo](img/quote-gene-spafford.jpg)]
+
+---
+
+# Reverse Proxy
+
+.center[![Spring Security Logo](img/rp-douanier.png)]
+
+---
+
+# Data
+
+.left[![Data Security Twitter Quote 1](img/norse-quote-data-1.png)]
+
+.right[![Data Security Twitter Quote 2](img/norse-quote-data-2.png)]
+
+.left[![Data Security Twitter Quote 3](img/norse-quote-data-3.png)]
+
+---
+
+# Data Storage
+
+.center[![Data Security Twitter Quote 4](img/norse-quote-data-4.png)]
+
+---
+
+# Encrypt with care
+
+.center[![Ashley Madison](img/ashley-madison.jpg)]
+
+---
+
+# Authentication & Authorization
+
+.center[![Password](img/password.jpg)]
+
+---
+
+# Managing Secrets... sucks.
+
+.right[![Managing Secret Tweet 1](img/managing-secret-1.png)]
+
+.left[![Managing Secret Tweet 2](img/managing-secret-2.png)]
+
+.right[![Managing Secret Tweet 3](img/managing-secret-3.png)]
+
+---
+
+# Strong Authentification
+
+.center[![Stolen password...](img/stolen-password-quote.png)]
+
+---
+
+# Security vs UX? Really?
+
+.center[![UX vs Security 1](img/ux-vs-security-1.png)]
+
+.center[![UX vs Security 3](img/ux-vs-security-3.png)]
+
+---
+
+# Continus Integration - Handling secrets
+
+.center[![ CI Secrets 1](img/ci-secrets-1.png)]
+
+---
+
+# Artifacts - Don't trust the Internet
+
+.center[![Artifact Management](img/artifacts-management.png)]
+
+---
+
+# Safer in the clouds ?
+
+.center[![Someone else computer](img/cloud-1.png)]
+
+---
+
+# Born to be Hacked!
+
+.left[![Fire Door (SELinux)](img/fire-door.jpg)]
+
+.right[![Smoke Detector (IDS)](img/smoke-detector.jpg)]
+
+---
+class: big-list
+
+# So remember...
+
+* Security is **your responsibility**, think about it!
+* Use ***Threat modeling**!
+* You’ll never be safe, nor will your data
+** **Encrypt**, everything that needs to!
+* Manage your secrets and use **strong authentification**
+** 2FA and SSO!
+* Security is not an excuse for a **bad UX**
+* Don’t forget continuous integration and the cloud
+* Be ready to **firefight**!
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
