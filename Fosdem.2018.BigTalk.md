@@ -30,9 +30,9 @@ You need to isolate, pick a small sub-systems, within your application.
 
 `DPL` Yes and it can even fit in your sprints, and to be readable, understood by all.
 
-`RPE` OK, I'm on board now. Let's say how to use this Threat modeling.
+`RPE` OK, I'm on board now! Let's say how to use this Threat modeling of yours.
 
-`DPL` Let's say there are two parts: STRIDE and DREAD.
+`DPL` Basically it has two parts - identify by acronyms: STRIDE and DREAD.
 
 Identify the threats: STRIDE
 -------
