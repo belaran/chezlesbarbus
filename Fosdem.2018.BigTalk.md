@@ -14,6 +14,8 @@ Hello
 
 :large_blue_circle: `RPE` Where do we start? Because security is a rather broad topic to say the least ?
 
+(((click))))
+
 Threat Modeling 01:00
 --------
 
@@ -36,6 +38,8 @@ You need to isolate, pick a small sub-systems, within your application.
 :large_blue_circle: `RPE` OK, I'm on board now! Let's say how to use this Threat modeling of yours.
 
 :red_circle: `DPL` Basically it has two parts - identify by acronyms: STRIDE and DREAD.
+
+(((click)))
 
 Identify the threats: STRIDE
 -------
@@ -81,7 +85,11 @@ understandeable by the other one. Sort of UML for security.
 
 :large_blue_circle: `RPE` If do like UML
 
-USe Case
+(pause)
+
+(((click)))
+
+Use Case
 ---
 
 :large_blue_circle: `RPE` Brilliant, now we know where to start. So let's talk application in a bit more concrete manner. Let's see describ a potential use case for an app.
@@ -104,6 +112,8 @@ A simple WAR file
 :red_circle: `DPL` (rolleyes)
 
 :large_blue_circle: `RPE` But the goods news it that security is like any other technical concerns - like logging. It has also Open Source framework. They are many out there, but let's take a look at a rather famous, complete one: Spring Security.
+
+(((click)))
 
 Spring Security 6mn
 ---
@@ -133,6 +143,8 @@ Spring Security 6mn
 :large_blue_circle: `RPE` Bottom line is that there is a lot of security *threats* to a web app nowdays, and you'll need something like Spring Security to help you ensure your webapp is able to cope with those.
 
 (pause)
+
+(((click)))
 
 Intranet 06:00
 ----
@@ -168,6 +180,8 @@ Firewall 8mn
 
 :red_circle: `DPL` OK, I see your point. But my app has to be reachable to be used. The port can't be closed.
 
+(((click)))
+
 :large_blue_circle: `RPE` Exactly. So the real trick is to *analyze* and *monitor* the content of the traffic. For instance, if you have a port open to send email, it should only be used for SMTP. Valid SMTP, and nothing else.
 
 Sidenote about this. As a consultant I've been to many different IT, at many different companies. There, I generally graded how *ineffective* security was by the number of port being uselessly blocked.
@@ -193,6 +207,8 @@ Sidenote about this. As a consultant I've been to many different IT, at many dif
 :red_circle: `DPL` OK, so bottom line is the key to securing app is protocol and content filtering.
 
 :large_blue_circle: `RPE` It's actually quite nice, because you reduce the scale of the attack a java dev has to worry. Anything going beyond the scope of what the app should get will already be dropped by the filtering.
+
+(((click)))
 
 (pause)
 
@@ -234,11 +250,15 @@ Encrypt the front-end 12mn
 
 (pause)
 
+(((click)))
+
 Because, the communication between the app and your DB (either it's NoSQL à la mongo or some regular SQL db) can be spy-ed on. You need to ensure that no one can access priviliged communication..
 
 :red_circle: `DPL` some more encryption there, to set up and maintain. And not all of the DB have support for that - MongoDB used to be lacking in this regards for instance.
 
 :large_blue_circle: `RPE` But that's not all. The data lives in the DB. So on the system's storage. Hacker can potentially get access to the system running the DB.
+
+(((click)))
 
 :red_circle: `DPL` So you may also need to encrypt data there. But you have to be smart about it. Encrypting everything has a definitive cost in performance and resource, but encrypting the *wrong* thing is even worse!
 
@@ -249,6 +269,8 @@ ref: http://money.cnn.com/2015/09/08/technology/ashley-madison-suicide/index.htm
 :red_circle: `DPL` Ohh... This can escalate quite quickly :)
 
 (pause)
+
+(((click)))
 
 2FA / SSO: 13mn
 ----
@@ -288,6 +310,8 @@ New SPoF of our infra
 So secret can not be put in: code, configuration,
 
 Where do we put our secrets?
+
+(((click)))
 
 :large_blue_circle: `RPE` Yes, this is core of the issue. Secret management is *not* easy. And in these day and age, you need automation and thus a dedicated tool to manage those (like Ansible Vault)
 
