@@ -1,3 +1,6 @@
+* RPE is :blue_circle: - does it work ?
+* DPL is :red_circle: - does it work ?
+
 Hello
 -------
 
