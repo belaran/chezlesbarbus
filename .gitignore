@@ -1,3 +1,4 @@
 *.pdf
 target/
 *.swp
+.atom
