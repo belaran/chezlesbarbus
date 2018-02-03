@@ -8,7 +8,7 @@ Hello
 
 :large_blue_circle: `RPE` ... and I'm Romain, a so-called Java expert, who knows even less about security...
 
-:red_circle: `DPL` Together, we are going to talk about security, or rather how to integrate security consideration, during you development process.
+:red_circle: `DPL` Together, we are going to talk about security, and how to integrate it in your development process.
 
 (pause)
 
@@ -402,6 +402,3 @@ Conclusion: 22mn
 
 :large_blue_circle: `RPE` finally, be *ready* to fight fire - because you are going to be hacked
 
-(pause)
-
-:red_circle: `DPL` Are you sure you are NOT being hacked right now ? :)
