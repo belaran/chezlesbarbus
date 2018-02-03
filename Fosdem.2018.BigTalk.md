@@ -19,10 +19,6 @@ Hello
 Threat Modeling 01:00
 --------
 
-:red_circle: `DPL` Indeed. Security is continuous process, touch any and all levels
-
-:large_blue_circle: `RPE` Yes, so how to deal with such a large scope?
-
 :red_circle: `DPL` There are solutions for that, one of them being Threat Modelling from M$ and OWASP.
 
 :large_blue_circle: `RPE` Ok, it sounds nice to have on a resume. And probably cool to brag during interview, or with people over a beer, but is it more than just some usual BS ? What does it do for you ?
