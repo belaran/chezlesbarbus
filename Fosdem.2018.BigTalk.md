@@ -225,7 +225,7 @@ Our Data 11mn
 
 ping pong
 
-* PII - bound by law to keep private - especially here in Germany
+* PII - Personally identifiable information - bound by law to keep private - especially here in Germany
 * restricted - on top of being confidential of course
 * confidential
 
