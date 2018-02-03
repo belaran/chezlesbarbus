@@ -14,8 +14,6 @@ Hello
 
 :large_blue_circle: `RPE` Where do we start? Because security is a rather broad topic to say the least ?
 
-(((click))))
-
 Threat Modeling 01:00
 --------
 
@@ -39,7 +37,7 @@ You need to isolate, pick a small sub-systems, within your application.
 
 :red_circle: `DPL` Basically it has two parts - identify by acronyms: STRIDE and DREAD.
 
-(((click)))
+(((click))) -> STRIDE
 
 Identify the threats: STRIDE
 -------
@@ -58,6 +56,8 @@ Assess the risks: DREAD 03:00
 -------
 
 :large_blue_circle: `RPE` OK, now I got what STRIDE is, in the broad sense, but what about this other fancy acronym, DREAD ?
+
+(((click))) -> DREAD
 
 :red_circle: `DPL` DREAD is meant to describe *risks* in a language understanable by the company in order to assess them by understanding the possible damages.
 
@@ -87,7 +87,7 @@ understandeable by the other one. Sort of UML for security.
 
 (pause)
 
-(((click)))
+(((click))) -> Use Case
 
 Use Case
 ---
@@ -113,7 +113,7 @@ A simple WAR file
 
 :large_blue_circle: `RPE` But the goods news it that security is like any other technical concerns - like logging. It has also Open Source framework. They are many out there, but let's take a look at a rather famous, complete one: Spring Security.
 
-(((click)))
+(((click))) -> Spring Security
 
 Spring Security 6mn
 ---
@@ -144,7 +144,7 @@ Spring Security 6mn
 
 (pause)
 
-(((click)))
+(((click))) -> Safe(r) Intranet ?
 
 Intranet 06:00
 ----
@@ -180,7 +180,7 @@ Firewall 8mn
 
 :red_circle: `DPL` OK, I see your point. But my app has to be reachable to be used. The port can't be closed.
 
-(((click)))
+(((click))) -> Reverse-Proxy
 
 :large_blue_circle: `RPE` Exactly. So the real trick is to *analyze* and *monitor* the content of the traffic. For instance, if you have a port open to send email, it should only be used for SMTP. Valid SMTP, and nothing else.
 
@@ -208,7 +208,7 @@ Sidenote about this. As a consultant I've been to many different IT, at many dif
 
 :large_blue_circle: `RPE` It's actually quite nice, because you reduce the scale of the attack a java dev has to worry. Anything going beyond the scope of what the app should get will already be dropped by the filtering.
 
-(((click)))
+(((click))) -> Data
 
 (pause)
 
@@ -250,7 +250,7 @@ Encrypt the front-end 12mn
 
 (pause)
 
-(((click)))
+(((click))) -> Data storage
 
 Because, the communication between the app and your DB (either it's NoSQL à la mongo or some regular SQL db) can be spy-ed on. You need to ensure that no one can access priviliged communication..
 
@@ -258,7 +258,7 @@ Because, the communication between the app and your DB (either it's NoSQL à la 
 
 :large_blue_circle: `RPE` But that's not all. The data lives in the DB. So on the system's storage. Hacker can potentially get access to the system running the DB.
 
-(((click)))
+(((click))) -> Encrypt with care
 
 :red_circle: `DPL` So you may also need to encrypt data there. But you have to be smart about it. Encrypting everything has a definitive cost in performance and resource, but encrypting the *wrong* thing is even worse!
 
@@ -270,7 +270,7 @@ ref: http://money.cnn.com/2015/09/08/technology/ashley-madison-suicide/index.htm
 
 (pause)
 
-(((click)))
+(((click))) -> Auth & Autoriz
 
 2FA / SSO: 13mn
 ----
@@ -283,9 +283,13 @@ ref: http://money.cnn.com/2015/09/08/technology/ashley-madison-suicide/index.htm
 
 :red_circle: `DPL` neither a lookup to the LDAP or Kerberos.
 
+(((click))) -> Passwords will be sotlen
+
 :large_blue_circle: `RPE` But, btw what is 2FA ?
 
 :red_circle: `DPL` (damien explains)
+
+(((click))) -> Secu vs UX
 
 :large_blue_circle: `RPE` 2FA is the only real way to have strong authentification, but one of the issue with it, it that can be quite uncomfortable for users. You need to always put out our token generator or your phone, and thus many users are fighting it, arguing it harms their productivity.
 
@@ -311,11 +315,13 @@ So secret can not be put in: code, configuration,
 
 Where do we put our secrets?
 
-(((click)))
+(((click))) => pic of secrets in Github
 
 :large_blue_circle: `RPE` Yes, this is core of the issue. Secret management is *not* easy. And in these day and age, you need automation and thus a dedicated tool to manage those (like Ansible Vault)
 
 :red_circle: `DPL` But the secrets are not the only weakness.
+
+(((click))) => pic of artefact management
 
 :large_blue_circle: `RPE` Indeed! CI is all about building your app and 99% of your app is *not* your code. Dependencies are fetch from all over the place... and this from the Internet - that you then trust implicitly!
 
@@ -335,6 +341,8 @@ cloud: 17mn
 :red_circle: `DPL` where?
 
 :large_blue_circle: `RPE` I don't to manage this shit. Let's do what the cool kids are all doing - going "cloud native".
+
+(((click))) => Safer in the clouds
 
 :red_circle: `DPL` Now you want to trust someone else conputer?
 
@@ -359,6 +367,8 @@ Firefigthers: 19mn
 
 :large_blue_circle: `RPE` A few years ago, now, Github had a massive DDOS attacked against them. They even kept their users informed through their twitter account. They were both very transparent about it but also actively fighting off the attack. Their team were both prepared to be hack and ready to react accordingly.
 
+(((click))) solarisBank status page
+
 :red_circle: `DPL` status page sB
 
 :large_blue_circle: `RPE` This kind of transparency is actually crucial. Look at the mess Equifax did in the US by *not* communicating immediatly about their breach.
@@ -366,6 +376,8 @@ Firefigthers: 19mn
 :red_circle: `DPL` They have endangered millions of people credit rating and the fact that the breach was hidden, did not end up helping it resolve it quickly.
 
 :large_blue_circle: `RPE` In short, The question is not if you are hacked but when you are hacked.
+
+(((click))) Born to be hacked
 
 :red_circle: `DPL` Like fire fighter, who are contiunously training to fight fire, your team needs to be ready to actively face an attack.
 
@@ -385,6 +397,8 @@ Firefigthers: 19mn
 
 Conclusion: 22mn
 ==========
+
+(((click))) last slide
 
 :red_circle: `DPL` see the big picture, analyse risks, use threat modelling to see clearly where u stand
 
