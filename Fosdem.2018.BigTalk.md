@@ -3,7 +3,7 @@ Hello
 
 `DPL` Hi everybody ! Welcome to Hairy Security. I'm Damien. I'm a security specialist who knows nothing about Java...
 
-`RPE` ... and I'm Romain. People think I'm a Java expert, but security is not field of expertise.
+`RPE` ... and I'm Romain, a so-called Java expert, who knows even less about security...
 
 `DPL` Together, we are going to talk about security, or rather how to integrate security consideration, during you development process.
 
@@ -16,7 +16,7 @@ Threat Modeling 01:00
 
 `DPL` Indeed. Security is continuous process, touch any and all levels
 
-`RPE` How to deal with such a large scope?
+`RPE` Yes, so how to deal with such a large scope?
 
 `DPL` There are solutions for that, one of them being Threat Modelling from M$ and OWASP.
 
@@ -37,7 +37,7 @@ You need to isolate, pick a small sub-systems, within your application.
 Identify the threats: STRIDE
 -------
 
-`DPL` first step : identifying the threats by categories.
+`DPL` first step : identifying the threats by *categories*.
 
 `RPE` Ok, so we have no time to cover all of that - it would complete separate talk. Let's be practical, let's look at one them. For instance, what this R stands for ?
 
@@ -45,14 +45,14 @@ Identify the threats: STRIDE
 
 `RPE` And how to fix or mitigate the impact as they say ?
 
-`DPL` *Audit trails* proving without doubt cred used
+`DPL` *Audit to trails*, ex: employee lies about a t-rex. You prove his login was used.
 
 Assess the risks: DREAD 03:00
 -------
 
 `RPE` OK, now I got what STRIDE is, in the broad sense, but what about this other fancy acronym, DREAD ?
 
-`DPL` DREAD is meant to describe risks in a language understanable by the company in order to assess them by understanding the possible damages.
+`DPL` DREAD is meant to describe *risks* in a language understanable by the company in order to assess them by understanding the possible damages.
 
 `RPE` By damage, you mean how bad would an attack would be on our business?
 
@@ -61,15 +61,15 @@ Assess the risks: DREAD 03:00
 (ping pong)
 `RPE` Cool. Then, let's go through, briefly each of those letter.
 
-`DPL` Reproducibility - how easy is it to reproduce the attack?
+`RPE` Reproducibility ? `DPL` - how easy is it to reproduce the attack?
 
-`RPE` Exploitability - how much work is it to launch the attack?
+`RPE` Exploitability ? `DPL` - how much work is it to launch the attack?
 
-`DPL` Affected users - how many people will be impacted?
+`RPE` Affected users ? `DPL`-  how many people will be impacted?
 
-`RPE` Discoverability - how easy is it to discover the threat?
+`RPE` Discoverability ? `DPL` - how easy is it to discover the threat?
 
-`DPL` So the goal is to identify and measure the risk behing the threat.
+`DPL` So the goal is to *identify* and *measure* the risk behing the threat.
 
 `RPE` OK, what I really like about all of this is that it's a brilliant *communication tool* between top management and low level expert - making each other language
 understandeable by the other one. Sort of UML for security.
@@ -239,7 +239,7 @@ Because, the communication between the app and your DB (either it's NoSQL à la 
 
 `DPL` So you may also need to encrypt data there. But you have to be smart about it. Encrypting everything has a definitive cost in performance and resource, but encrypting the *wrong* thing is even worse!
 
-`RPE` And a perfect, somewhat recent, example, is the hack of Ashley Madison. Remember, it was a "adult dating website"... where one could try to find a mistress online. And they did everything right, they did hash the user's password. But not their email nor physical adress, and real name. All one needed to blackmail you! And the hack actually led to people comitting suicide because of that!
+`RPE` And a perfect, somewhat recent, example, is the hack of Ashley Madison. Remember, it was a "adult dating website"... where one could try to find a mistress online. And they did everything right, they did hash the user's password. But not their email nor physical adress, and real name. All one needed to blackmail you! And the hack actually *led to people comitting suicide* because of that!
 
 ref: http://money.cnn.com/2015/09/08/technology/ashley-madison-suicide/index.html
 
