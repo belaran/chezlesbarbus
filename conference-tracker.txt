@@ -1,60 +1,44 @@
-Conference we want to submit to
-=====
-
-2017
+Conference Tracker
 ====
-
-Devox BE
-----
-*  https://cfp.devoxx.be/
-* When 6th to 10th Nov 2017
-* CFP opens in May 2017
-* Status: REJECTED
-
-JAX London
-----
-* https://jaxlondon.com/call-for-papers/
-* When ? 9-12/10 2017
-* CFP finished on 18/04/2017
-* Status: REJECTED
-
-Code Motion Berlin
-----
-* CFP: http://speaker.codemotionworld.com/c4p.php?c=gestione_call4paper
-* When ? 12th & 13th October @Kulturbraurei
-* CFP finishes on 15/06/2017
-* Status: REJECTED
 
 2018
 ====
 
+Code Motion Berlin
+----
+* CFP: http://speaker.codemotionworld.com/c4p.php?c=gestione_call4paper
+* When: November 20-21 @Kulturbraurei
+* CFP finishes on 15/06/2017
+* Status: TODO
+
+2019
+====
+
 Javaland
 ----
+
+* CfP:
+* When: 19-21 Mars
 * Where: Köln
-* CfP closes on 10/08/2017
-* Status: REJECTED
+* CfP opens on?
+* Status: TODO
 
 Mix IT
 ----
-* Status: FAILED
 
-Code Motion Amsterdam
-----
-* CFP: http://speaker.codemotionworld.com/c4p.php?c=gestione_call4paper
-* When: May 8th
-* CFP finishes on 15/06/2017
-* Status: SUBMITTED
-
+* CfP:
+* When: 19.04?
+* Status: TODO
+* CfP opens on?
 
 Devoxx France
 ---
 * Where: Paris
-* CfP closes on 14/01/2017
-* Status: SUBMITTED
+* CfP opens on?
+* Status: TODO
 
 JavaZone
 ----
 * Where: Oslo
-* When: September 2018
-* https://2017.javazone.no/
-* CfP opens in 2018
+* When: September 2019?
+* Status: TODO
